@@ -1,0 +1,27 @@
+<nex:nexml xmlns="http://www.nexml.org/2009" xmlns:pt="http://phylotastic.org/terms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:nex="http://www.nexml.org/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="0.9" xsi:schemaLocation="http://www.nexml.org/2009 http://www.nexml.org/2009/nexml.xsd" generator="Bio::Phylo::Project v.0.49_1660" about="#nl13">
+<meta xsi:type="nex:LiteralMeta" content="MapReduce" id="ma14" datatype="xsd:string" property="pt:pruner"/>
+<meta rel="pt:source" href="http://phylotastic-wg.nescent.org/examples/rawdata/Bininda-emonds_2007_mammals.nex" xsi:type="nex:ResourceMeta" id="ma15"/>
+<meta xsi:type="nex:LiteralMeta" content="Homo_sapiens,Pan_troglodytes,Gorilla_gorilla" id="ma16" datatype="xsd:string" property="pt:species"/>
+<meta xsi:type="nex:LiteralMeta" content="mammals" id="ma17" datatype="xsd:string" property="pt:treeid"/>
+<meta xsi:type="nex:LiteralMeta" content="exactMatch" id="ma18" datatype="xsd:string" property="pt:tnrs"/>
+<otus id="os9">
+<otu label="Gorilla_gorilla" id="ou10"/>
+<otu label="Homo_sapiens" id="ou11"/>
+<otu label="Pan_troglodytes" id="ou12"/>
+</otus>
+<trees otus="os9" id="ts8">
+<tree xsi:type="nex:IntTree" id="te1">
+<node root="true" label="1851" id="ne4"/>
+<node label="800" id="ne3"/>
+<node label="Gorilla_gorilla" id="ne2" otu="ou10"/>
+<node label="799" id="ne6"/>
+<node label="Homo_sapiens" id="ne5" otu="ou11"/>
+<node label="Pan_troglodytes" id="ne7" otu="ou12"/>
+<edge source="ne4" target="ne3" id="edge3"/>
+<edge source="ne3" target="ne2" id="edge2"/>
+<edge source="ne3" target="ne6" id="edge6"/>
+<edge source="ne6" target="ne5" id="edge5"/>
+<edge source="ne6" target="ne7" id="edge7"/>
+</tree>
+</trees>
+</nex:nexml>

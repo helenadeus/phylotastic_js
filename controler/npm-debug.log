@@ -1,0 +1,284 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install', 'jquery' ]
+info using npm@1.0.17
+info using node@v0.4.11
+verbose config file /Users/helenadeus/.npmrc
+verbose config file /usr/etc/npmrc
+verbose into /Users/helenadeus/Documents/javascript/phylotastic_core/controler [ 'jquery' ]
+verbose cache add [ 'jquery', null ]
+info addNamed [ 'jquery', '' ]
+verbose addNamed [ null, '' ]
+verbose GET jquery
+verbose raw, before any munging jquery
+verbose url resolving [ 'http://registry.npmjs.org/', './jquery' ]
+verbose url resolved http://registry.npmjs.org/jquery
+verbose url parsed { protocol: 'http:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'http://registry.npmjs.org/jquery',
+verbose url parsed   pathname: '/jquery' }
+verbose response http://registry.npmjs.org/jquery
+silly chunk {"_id":"jquery","_rev":"39-938c4be19b39f0a72bfade65b14a5c03","name":"jquery","description":"jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)","dist-tags":{"latest":"1.7.2"},"versions":{"1.5.1":{"name":"jquery","description":"jQuery: The Write Less, Do More, JavaScript Library","url":"jquery.com","keywords":["util","dom","jquery"],"author":{"name":"John Resig","email":"jeresig@gmail.com"},"contributors":[],"dependencies":{"jsdom":"=0.1.20","htmlparser":">= 1.7.3"},"lib":"lib","main":"./dist/node-jquery.js","version":"1.5.1","_id":"jquery@1.5.1","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"0.3.15","_nodeVersion":"v0.4.2","directories":{"lib":"./lib"},"files":[""],"_defaultsLoaded":true,"dist":{"shasum":"2ae2d661e906c1a01e044a71bb5b2743942183e5","tarball":"http://registry.npmjs.org/jquery/-/jquery-1.5.1.tgz"}},"1.6.2":{"name":"jquery","description":"jQuery: The Write Less, Do More, JavaScript Library","url":"jquery.com","keywords":["util","dom","jquery"],"author":{"name":"John Resig","email":"jeresig@gmail.com"},"contributors":[],"dependencies":{"jsdom":">=0.2.0","htmlparser":">= 1.7.3"},"lib":"lib","main":"./dist/node-jquery.js","version":"1.6.2","_npmJsonOpts":{"file":"/Users/coolaj86/.n
+silly chunk pm/jquery/1.6.2/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jquery@1.6.2","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.15","_nodeVersion":"v0.4.8","_defaultsLoaded":true,"dist":{"shasum":"01757a4c5beea29e8ae697527c3131abbe997a28","tarball":"http://registry.npmjs.org/jquery/-/jquery-1.6.2.tgz"},"scripts":{},"directories":{}},"1.6.3":{"name":"jquery","description":"jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)","url":"http://jquery.com","keywords":["util","dom","jquery"],"author":{"name":"John Resig","email":"jeresig@gmail.com"},"contributors":[],"dependencies":{"jsdom":">=0.2.0","htmlparser":">= 1.7.3"},"lib":".","main":"./node-jquery.js","version":"1.6.3","_npmJsonOpts":{"file":"/Users/coolaj86/.npm/jquery/1.6.3/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jquery@1.6.3","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.22","_nodeVersion":"v0.4.8","_defaultsLoaded":true,"dist":{"shasum":"e1f732fa7e718a6adb3ec20ae0eb2a64fd95ef01","tarball":"http://registry.npmjs.org/jquery/-/jquery-1.6.3.tgz"},"scripts":{},"maintainers":[{"name":"coolaj86","email":"coolaj86@gmail.com"}],"directories":{}},"1.7.2":{"name":"jquery","description":"jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)","version":"1.7.2","url":"http://jquery.com","homepage"
+silly chunk :"https://github.com/coolaj86/node-jquery","author":{"name":"James Morrin","email":"treasonx@gmail.com"},"repository":{"type":"git","url":"git://github.com/coolaj86/node-jquery.git"},"bugs":{"url":"https://github.com/coolaj86/node-jquery/issues"},"licenses":[{"type":"MIT","url":"https://github.com/coolaj86/node-jquery/blob/master/LICENSE-MIT"}],"main":"lib/node-jquery","engines":{"node":"0.6"},"scripts":{"test":"grunt test"},"dependencies":{"jsdom":"~0.2.14","htmlparser":"1.7.6","xmlhttprequest":"~1.3.0"},"devDependencies":{"grunt":"~0.3.8","nodeunit":"~0.7.4"},"keywords":["util","dom","jquery"],"_npmUser":{"name":"treasonx","email":"treasonx@gmail.com"},"_id":"jquery@1.7.2","optionalDependencies":{},"_engineSupported":true,"_npmVersion":"1.1.12","_nodeVersion":"v0.6.14","_defaultsLoaded":true,"dist":{"shasum":"a93746763aca75a34df4c16395b0826310d0eaf2","tarball":"http://registry.npmjs.org/jquery/-/jquery-1.7.2.tgz"},"readme":"node-jQuery\n====\n\nA stupid-simple wrapper over jQuery for  Node.JS (server). Currently 1.7.2.\n\nNode.JS\n---\n\n    npm install jQuery\n\n    var $ = require('jQuery');\n\n\nExamples\n---\n\n    $(\"<h1>test passes</h1>\").appendTo(\"body\");\n    console.log($(\"body\").html());\n\nIn Node.JS you may also create separate window instances\n\n    var jsdom = require('jsdom').jsdom\n      , myWindow = jsdom().createWindow()\n      , $ = require('jQuery')\n      , jq = require('jQuery').create()\n     
+silly chunk  , jQuery = require('jQuery').create(myWindow)\n      ;\n\n    $(\"<h1>test passes</h1>\").appendTo(\"body\");\n    console.log($(\"body\").html());\n\n    jq(\"<h2>other test passes</h2>\").appendTo(\"body\");\n    console.log(jq(\"body\").html());\n\n    jQuery(\"<h3>third test passes</h3>\").appendTo(\"body\");\n    console.log(jQuery(\"body\").html());\n\nOutput:\n\n    <h1>test passes</h1>\n    <h2>other test passes</h2>\n    <h3>third test passes</h3>\n\nJSONP Example\n----\n\n    var $ = require('jQuery');\n\n    $.getJSON('http://twitter.com/status/user_timeline/treason.json?count=10&callback=?',function(data) {\n      console.log(data);\n    });\n\n\n","maintainers":[{"name":"coolaj86","email":"coolaj86@gmail.com"},{"name":"treasonx","email":"treasonx@gmail.com"}],"directories":{}}},"maintainers":[{"name":"coolaj86","email":"coolaj86@gmail.com"},{"name":"treasonx","email":"treasonx@gmail.com"}],"time":{"1.5.1":"2011-03-19T07:19:56.956Z","1.6.2":"2011-07-06T16:13:21.519Z","1.6.3":"2011-09-12T19:05:34.373Z","1.7.2":"2012-05-01T11:14:09.090Z"},"author":{"name":"James Morrin","email":"treasonx@gmail.com"},"users":{"dodo":true},"repository":{"type":"git","url":"git://github.com/coolaj86/node-jquery.git"}}
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"A1218YKVWVDBUJPLW160Q6NFH"',
+silly get cb     date: 'Wed, 06 Jun 2012 16:24:00 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '5384' } ]
+verbose mkdir done: /Users/helenadeus/.npm/jquery 755
+verbose GET jquery/1.7.2
+verbose raw, before any munging jquery/1.7.2
+verbose url resolving [ 'http://registry.npmjs.org/', './jquery/1.7.2' ]
+verbose url resolved http://registry.npmjs.org/jquery/1.7.2
+verbose url parsed { protocol: 'http:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'http://registry.npmjs.org/jquery/1.7.2',
+verbose url parsed   pathname: '/jquery/1.7.2' }
+verbose response http://registry.npmjs.org/jquery/1.7.2
+silly chunk {"name":"jquery","description":"jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)","version":"1.7.2","url":"http://jquery.com","homepage":"https://github.com/coolaj86/node-jquery","author":{"name":"James Morrin","email":"treasonx@gmail.com"},"repository":{"type":"git","url":"git://github.com/coolaj86/node-jquery.git"},"bugs":{"url":"https://github.com/coolaj86/node-jquery/issues"},"licenses":[{"type":"MIT","url":"https://github.com/coolaj86/node-jquery/blob/master/LICENSE-MIT"}],"main":"lib/node-jquery","engines":{"node":"0.6"},"scripts":{"test":"grunt test"},"dependencies":{"jsdom":"~0.2.14","htmlparser":"1.7.6","xmlhttprequest":"~1.3.0"},"devDependencies":{"grunt":"~0.3.8","nodeunit":"~0.7.4"},"keywords":["util","dom","jquery"],"_npmUser":{"name":"treasonx","email":"treasonx@gmail.com"},"_id":"jquery@1.7.2","optionalDependencies":{},"_engineSupported":true,"_npmVersion":"1.1.12","_nodeVersion":"v0.6.14","_defaultsLoaded":true,"dist":{"shasum":"a93746763aca75a34df4c16395b0826310d0eaf2","tarball":"http://registry.npmjs.org/jquery/-/jquery-1.7.2.tgz"},"readme":"node-jQuery\n====\n\nA stupid-simple wrapper over jQuery for  Node.JS (server). Currently 1.7.2.\n\nNode.JS\n---\n\n    npm install jQuery\n\n    var $ = require('jQuery');\n\n\nExamples\n---\n\n    $(\"<h1>test passes</h1>\").appendTo(\"body\");\n    console.log($(\"body\").html());\n\nIn Node.JS you may also create separate window instances\n
+silly chunk \n    var jsdom = require('jsdom').jsdom\n      , myWindow = jsdom().createWindow()\n      , $ = require('jQuery')\n      , jq = require('jQuery').create()\n      , jQuery = require('jQuery').create(myWindow)\n      ;\n\n    $(\"<h1>test passes</h1>\").appendTo(\"body\");\n    console.log($(\"body\").html());\n\n    jq(\"<h2>other test passes</h2>\").appendTo(\"body\");\n    console.log(jq(\"body\").html());\n\n    jQuery(\"<h3>third test passes</h3>\").appendTo(\"body\");\n    console.log(jQuery(\"body\").html());\n\nOutput:\n\n    <h1>test passes</h1>\n    <h2>other test passes</h2>\n    <h3>third test passes</h3>\n\nJSONP Example\n----\n\n    var $ = require('jQuery');\n\n    $.getJSON('http://twitter.com/status/user_timeline/treason.json?count=10&callback=?',function(data) {\n      console.log(data);\n    });\n\n\n","maintainers":[{"name":"coolaj86","email":"coolaj86@gmail.com"},{"name":"treasonx","email":"treasonx@gmail.com"}],"directories":{}}
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"A1218YKVWVDBUJPLW160Q6NFH"',
+silly get cb     date: 'Wed, 06 Jun 2012 16:24:00 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '2411' } ]
+verbose mkdir done: /Users/helenadeus/.npm/jquery/1.7.2 755
+verbose bin dist [ '0.4-ares1.7.4-ev4.4-openssl0.9.8r-v83.1.8.26-darwin-11.3.0',
+verbose bin dist   { shasum: 'a93746763aca75a34df4c16395b0826310d0eaf2',
+verbose bin dist     tarball: 'http://registry.npmjs.org/jquery/-/jquery-1.7.2.tgz' } ]
+verbose addRemoteTarball [ 'http://registry.npmjs.org/jquery/-/jquery-1.7.2.tgz',
+verbose addRemoteTarball   'a93746763aca75a34df4c16395b0826310d0eaf2' ]
+verbose mkdir done: /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007 755
+info fetch http://registry.npmjs.org/jquery/-/jquery-1.7.2.tgz
+verbose fetch to /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/tmp.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 39025
+info shasum a93746763aca75a34df4c16395b0826310d0eaf2
+info shasum /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/tmp.tgz
+verbose mkdir done: /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/tmp.tgz"
+verbose success tar "-mvxpf" "-" "-o" "-C" "/var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm"
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/.npmignore
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/grunt.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/LICENSE-MIT
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/package.json
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/README.md
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/lib/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/lib/node-jquery.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/src/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/src/wrapper.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/tmp/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/tmp/jquery.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/core.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/css.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/xmlhttp.js
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/fixtures/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/fixtures/core.html
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/fixtures/css.css
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/fixtures/css.html
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/fixtures/xmlhttp.json
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/helpers/
+silly asyncMap in gTP /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package/test/helpers/helper.js
+verbose gunzed /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package
+verbose rm'ed /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package
+verbose renamed [ '/var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/___package.npm/package',
+verbose renamed   '/var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package' ]
+silly testEngine { name: 'jquery',
+silly testEngine   description: 'jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)',
+silly testEngine   version: '1.7.2',
+silly testEngine   url: 'http://jquery.com',
+silly testEngine   homepage: 'https://github.com/coolaj86/node-jquery',
+silly testEngine   author: { name: 'James Morrin', email: 'treasonx@gmail.com' },
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/coolaj86/node-jquery.git' },
+silly testEngine   bugs: { url: 'https://github.com/coolaj86/node-jquery/issues' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'MIT',
+silly testEngine        url: 'https://github.com/coolaj86/node-jquery/blob/master/LICENSE-MIT' } ],
+silly testEngine   main: 'lib/node-jquery',
+silly testEngine   engines: { node: '0.6' },
+silly testEngine   scripts: { test: 'grunt test' },
+silly testEngine   dependencies: 
+silly testEngine    { jsdom: '~0.2.14',
+silly testEngine      htmlparser: '1.7.6',
+silly testEngine      xmlhttprequest: '~1.3.0' },
+silly testEngine   devDependencies: { grunt: '~0.3.8', nodeunit: '~0.7.4' },
+silly testEngine   keywords: [ 'util', 'dom', 'jquery' ],
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'jquery@1.7.2',
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.17',
+silly testEngine   _nodeVersion: 'v0.4.11',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package' }
+verbose caching /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package/package.json
+verbose loadDefaults jquery@1.7.2
+verbose tarball contents [ 'package' ]
+verbose from cache /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package/package.json
+verbose pack /var/folders/52/07ytgjmd1jxfwsvcrr87g26m0000gn/T/npm-1338999840643/1338999840643-0.9046657232102007/contents/package /Users/helenadeus/.npm/jquery/1.7.2/package.tgz
+verbose mkdir'ed /Users/helenadeus/.npm/jquery/1.7.2
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'package/grunt.js',
+silly tar args   'package/.npmignore',
+silly tar args   'package/LICENSE-MIT',
+silly tar args   'package/package.json',
+silly tar args   'package/README.md',
+silly tar args   'package/lib/node-jquery.js',
+silly tar args   'package/src/wrapper.js',
+silly tar args   'package/tmp/jquery.js',
+silly tar args   'package/test/core.js',
+silly tar args   'package/test/css.js',
+silly tar args   'package/test/xmlhttp.js',
+silly tar args   'package/test/fixtures/core.html',
+silly tar args   'package/test/fixtures/css.css',
+silly tar args   'package/test/fixtures/css.html',
+silly tar args   'package/test/fixtures/xmlhttp.json',
+silly tar args   'package/test/helpers/helper.js' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir done: /Users/helenadeus/.npm/jquery/1.7.2/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /Users/helenadeus/.npm/jquery/1.7.2/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/Users/helenadeus/.npm/jquery/1.7.2/package.tgz"
+verbose success tar "-mvxpf" "-" "-o" "-C" "/Users/helenadeus/.npm/jquery/1.7.2/___package.npm"
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/.npmignore
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/grunt.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/LICENSE-MIT
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/package.json
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/README.md
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/lib/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/lib/node-jquery.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/src/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/src/wrapper.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/tmp/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/tmp/jquery.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/core.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/css.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/xmlhttp.js
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/fixtures/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/fixtures/core.html
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/fixtures/css.css
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/fixtures/css.html
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/fixtures/xmlhttp.json
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/helpers/
+silly asyncMap in gTP /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package/test/helpers/helper.js
+verbose gunzed /Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package
+verbose rm'ed /Users/helenadeus/.npm/jquery/1.7.2/package
+verbose renamed [ '/Users/helenadeus/.npm/jquery/1.7.2/___package.npm/package',
+verbose renamed   '/Users/helenadeus/.npm/jquery/1.7.2/package' ]
+silly testEngine { name: 'jquery',
+silly testEngine   description: 'jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)',
+silly testEngine   version: '1.7.2',
+silly testEngine   url: 'http://jquery.com',
+silly testEngine   homepage: 'https://github.com/coolaj86/node-jquery',
+silly testEngine   author: { name: 'James Morrin', email: 'treasonx@gmail.com' },
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/coolaj86/node-jquery.git' },
+silly testEngine   bugs: { url: 'https://github.com/coolaj86/node-jquery/issues' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'MIT',
+silly testEngine        url: 'https://github.com/coolaj86/node-jquery/blob/master/LICENSE-MIT' } ],
+silly testEngine   main: 'lib/node-jquery',
+silly testEngine   engines: { node: '0.6' },
+silly testEngine   scripts: { test: 'grunt test' },
+silly testEngine   dependencies: 
+silly testEngine    { jsdom: '~0.2.14',
+silly testEngine      htmlparser: '1.7.6',
+silly testEngine      xmlhttprequest: '~1.3.0' },
+silly testEngine   devDependencies: { grunt: '~0.3.8', nodeunit: '~0.7.4' },
+silly testEngine   keywords: [ 'util', 'dom', 'jquery' ],
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/Users/helenadeus/.npm/jquery/1.7.2/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'jquery@1.7.2',
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.17',
+silly testEngine   _nodeVersion: 'v0.4.11',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '933c4a357bb5c9fa281c5cbb89219e0e5d2e168e' } }
+verbose caching /Users/helenadeus/.npm/jquery/1.7.2/package/package.json
+verbose loadDefaults jquery@1.7.2
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 38302
+info shasum 933c4a357bb5c9fa281c5cbb89219e0e5d2e168e
+info shasum /Users/helenadeus/.npm/jquery/1.7.2/package.tgz
+verbose from cache /Users/helenadeus/.npm/jquery/1.7.2/package/package.json
+verbose chmod /Users/helenadeus/.npm/jquery/1.7.2/package.tgz 644
+silly resolved [ { name: 'jquery',
+silly resolved     description: 'jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)',
+silly resolved     version: '1.7.2',
+silly resolved     url: 'http://jquery.com',
+silly resolved     homepage: 'https://github.com/coolaj86/node-jquery',
+silly resolved     author: { name: 'James Morrin', email: 'treasonx@gmail.com' },
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/coolaj86/node-jquery.git' },
+silly resolved     bugs: { url: 'https://github.com/coolaj86/node-jquery/issues' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'MIT',
+silly resolved          url: 'https://github.com/coolaj86/node-jquery/blob/master/LICENSE-MIT' } ],
+silly resolved     main: 'lib/node-jquery',
+silly resolved     engines: { node: '0.6' },
+silly resolved     scripts: { test: 'grunt test' },
+silly resolved     dependencies: 
+silly resolved      { jsdom: '~0.2.14',
+silly resolved        htmlparser: '1.7.6',
+silly resolved        xmlhttprequest: '~1.3.0' },
+silly resolved     devDependencies: { grunt: '~0.3.8', nodeunit: '~0.7.4' },
+silly resolved     keywords: [ 'util', 'dom', 'jquery' ],
+silly resolved     _npmJsonOpts: 
+silly resolved      { file: '/Users/helenadeus/.npm/jquery/1.7.2/package/package.json',
+silly resolved        wscript: false,
+silly resolved        contributors: false,
+silly resolved        serverjs: false },
+silly resolved     _id: 'jquery@1.7.2',
+silly resolved     _engineSupported: false,
+silly resolved     _npmVersion: '1.0.17',
+silly resolved     _nodeVersion: 'v0.4.11',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '933c4a357bb5c9fa281c5cbb89219e0e5d2e168e' } } ]
+info into /Users/helenadeus/Documents/javascript/phylotastic_core/controler jquery@1.7.2
+info installOne jquery@1.7.2
+verbose installOne cb jquery@1.7.2
+ERR! Unsupported
+ERR! Not compatible with your version of node/npm: jquery@1.7.2
+ERR! Required: {"node":"0.6"}
+ERR! Actual:   {"npm":"1.0.17","node":"v0.4.11"}
+ERR! 
+ERR! System Darwin 11.3.0
+ERR! command "node" "/usr/bin/npm" "install" "jquery"
+ERR! cwd /Users/helenadeus/Documents/javascript/phylotastic_core/controler
+ERR! node -v v0.4.11
+ERR! npm -v 1.0.17
+verbose exit [ 1, true ]
